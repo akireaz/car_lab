@@ -36,32 +36,32 @@ describe('Car', function(){
   });
 
   describe('#passengers', function(){
-    xit('should exist and initially be empty', function(){
+    it('should exist and initially be empty', function(){
       expect(myCar.passengers).to.exist.to.be.empty;
     });
   });
 
   describe('#sale', function(){
-    xit('should move currentOwner to previousOwners array', function(){
+    it('should move currentOwner to previousOwners array', function(){
       myCar.sale("Charlie");
       expect(myCar.previousOwners[0]).to.equal("Manufacturer");
     });
 
-    xit('should update currentOwner with the new owner', function(){
+    it('should update currentOwner with the new owner', function(){
       myCar.sale("Charlie");
       expect(myCar.currentOwner).to.equal("Charlie");
     });
   });
 
   describe('#paint', function(){
-    xit('should update the color of myCar', function(){
+      it('should update the color of myCar', function(){
       myCar.paint("Blue");
       expect(myCar.color).to.equal("Blue");
     });
   });
 
   describe('#start', function(){
-    xit('should update the state to on', function(){
+       it('should update the state to on', function(){
       myCar.start();
       expect(myCar.state).to.equal("on");
     });
